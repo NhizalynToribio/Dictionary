@@ -25,7 +25,7 @@ print_menu()
 
 # This will loop the whole program in what the user wants in 1-3 options
 while True:
-    option = int(input("\nHi! Choose an option on what do you want to do? (From 1-3) : "))
+    option = int(input("\nHi! Please Choose an option on what do you want to do? (From 1-3) : "))
 
 # This is the option 1 that will enter the infos of the user
     if option == 1:
@@ -50,3 +50,16 @@ while True:
         print("This is the entered Age:", Age)
         print("\nYou have Successfully added a new Contact for Contact Tracing")
         print_menu()
+
+    # This is the option 2, that will search a users full name in the Dictionary
+    elif option == 2:
+        print("\n============== SEARCH CONTACTS =============")
+        Fullname = (input("\nPlease input the full name of the person that you want to search: "))
+
+        if Fullname in ContactDictionary.keys():
+            for Contacts in ContactDictionary[Fullname].items():
+                print("This is the information found in the Dictionary of: ", Contacts[0], ":", Contacts[1])
+            print("\nYou have Successfully Searched a Contact in the Dictionary")
+        else:
+            print("\nThe entered Full name is not found in the Dictionary")
+            print_menu()

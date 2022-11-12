@@ -4,7 +4,7 @@ print("***************** BSCOE 2 -2 *******************")
 print("********** ASSIGNMENT (DICTIONARY) ****************")
 
 # This is the Dictionary to store the Contacts
-ContactDictionary = {}
+ContactTracingDictionary = {}
 
 
 # Shows the Menu of the Program
@@ -25,7 +25,7 @@ print_menu()
 
 # This will loop the whole program in what the user wants in 1-3 options
 while True:
-    option = int(input("\nHi! Please Choose an option on what do you want to do? (From 1-3) : "))
+    option = int(input("\nHi! Please choose an option on What do you want to do? (From 1-3) : "))
 
 # This is the option 1 that will enter the info`s of the user
     if option == 1:
@@ -37,10 +37,9 @@ while True:
         Occupation = (input("Enter your Occupation: "))
         Age = (int(input("Enter your Age: ")))
 
-        ContactDictionary[Fullname] = {"Full Name": Fullname, "Address": UsersAddress,
-                                       "Phone Number": PhoneNumber, "Gender": Gender,
-                                       "Occupation": Occupation,
-                                       "Age": Age}
+        ContactTracingDictionary[Fullname] = {"Full Name": Fullname, "Address": UsersAddress,
+                                            "Phone Number": PhoneNumber, "Gender": Gender,
+                                            "Occupation": Occupation, "Age": Age}
 
         print("\n===== THIS IS THE ENTERED INFORMATION =====")
         print("\nThis is the entered Fullname:", Fullname)
@@ -57,19 +56,19 @@ while True:
         print("\n============== SEARCH CONTACTS =============")
         Fullname = (input("\nPlease input the Full name of the person that you want to search: "))
 
-        if Fullname in ContactDictionary.keys():
-            for Contacts in ContactDictionary[Fullname].items():
+        if Fullname in ContactTracingDictionary.keys():
+            for Contacts in ContactTracingDictionary[Fullname].items():
                 print("This is the information found in the Dictionary of: ", Contacts[0], ":", Contacts[1])
             print("\nYou have Successfully Searched a Contact in the Dictionary")
             print_menu()
         else:
-            print("\nThe entered Full name is not found in the Contact Tracing Dictionary")
+            print("\nThe entered Full name which is", Fullname, "is not found in the Contact Tracing Dictionary")
             print_menu()
 
     # This is option 3, that will exit the program
     elif option == 3:
         print("============== EXIT THE PROGRAM =============")
-        ExitOrRetry = input("Do you want to exit or retry: (y/n): ")
+        ExitOrRetry = input("\nDo you want to exit or retry: (y/n): ")
         if ExitOrRetry == "y":
 
             print("""\n

@@ -15,7 +15,7 @@ def print_menu():
                             MENU
                  1 -> ADD AN ITEM         [1]
                  2 -> SEARCH              [2]
-                 3 -> EXIT                [3]\n
+                 3 -> EXIT (Y/N)          [3]\n
         =============================================
         ---------------------------------------------
         """)
@@ -32,7 +32,7 @@ while True:
         print("\n=========== ADD Information =============")
         Fullname = (input("\nPlease Enter your Full Name: "))
         UsersAddress = (input("Enter your Address Location: "))
-        PhoneNumber = (input("Enter your Contact Number: "))
+        PhoneNumber = (input("Enter your Phone Number: "))
         Gender = (input("Enter your Gender: "))
         Occupation = (input("Enter your occupation: "))
         Age = (int(input("Enter your age: ")))
@@ -54,12 +54,13 @@ while True:
     # This is the option 2, that will search a users full name in the Dictionary
     elif option == 2:
         print("\n============== SEARCH CONTACTS =============")
-        Fullname = (input("\nPlease input the full name of the person that you want to search: "))
+        Fullname = (input("\nPlease input the Full name of the person that you want to search: "))
 
         if Fullname in ContactDictionary.keys():
             for Contacts in ContactDictionary[Fullname].items():
                 print("This is the information found in the Dictionary of: ", Contacts[0], ":", Contacts[1])
             print("\nYou have Successfully Searched a Contact in the Dictionary")
+            print_menu()
         else:
             print("\nThe entered Full name is not found in the Dictionary")
             print_menu()
@@ -67,8 +68,8 @@ while True:
     # This is option 3, that will exit the program
     elif option == 3:
         print("============== EXIT THE PROGRAM =============")
-        ExitOrRetry = input("Do you want to exit or retry: (yes")
-        if ExitOrRetry == "yes":
+        ExitOrRetry = input("Do you want to exit or retry: (y/n): ")
+        if ExitOrRetry == "y":
 
             print("""\n
             =====================================================

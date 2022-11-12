@@ -1,4 +1,4 @@
 print("**************** PROGRAMMED BY: *****************")
 print("************** NHIZALYN TORIBIO ****************")
 print("***************** BSCOE 2 -2 *******************")
-print("*********** ASSIGNMENT IN DS *****************")
+print("********** ASSIGNMENT IN DS ****************")

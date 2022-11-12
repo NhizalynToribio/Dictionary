@@ -17,8 +17,36 @@ def print_menu():
                  2 -> SEARCH              [2]
                  3 -> EXIT                [3]\n
         =============================================
-        ---------------------------------------------\n
+        ---------------------------------------------
         """)
 
 
 print_menu()
+
+# This will loop the whole program in what the user wants in 1-3 options
+while True:
+    option = int(input("\nHi! Choose an option on what do you want to do? (From 1-3) : "))
+
+# This is the option 1 that will enter the infos of the user
+    if option == 1:
+        print("\n=========== ADD Information =============")
+        Fullname = (input("\nPlease Enter your Full Name: "))
+        UsersAddress = (input("Enter your Address Location: "))
+        PhoneNumber = (input("Enter your Contact Number: "))
+        Gender = (input("Enter your Gender: "))
+        Occupation = (input("Enter your occupation: "))
+        Age = (int(input("Enter your age: ")))
+
+        ContactDictionary[Fullname] = {"Full Name": Fullname, "Address": UsersAddress,
+                                       "Phone Number": PhoneNumber, "Gender": Gender,
+                                       "Occupation": Occupation,
+                                       "Age": Age}
+        print("\n===== THIS IS THE ENTERED INFORMATION =====")
+        print("\nThis is the entered Fullname:", Fullname)
+        print("This is the entered Address:", UsersAddress)
+        print("This is the entered Phone Number:", PhoneNumber)
+        print("This is the entered Gender:", Gender)
+        print("This is the entered Occupation:", Occupation)
+        print("This is the entered Age:", Age)
+        print("\nYou have Successfully added a new Contact for Contact Tracing")
+        print_menu()

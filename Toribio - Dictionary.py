@@ -63,3 +63,30 @@ while True:
         else:
             print("\nThe entered Full name is not found in the Dictionary")
             print_menu()
+
+    # This is option 3, that will exit the program
+    elif option == 3:
+        print("============== EXIT THE PROGRAM =============")
+        ExitOrRetry = input("Do you want to exit or retry: (yes")
+        if ExitOrRetry == "yes":
+
+            print("""\n
+            =====================================================
+            -----------------------------------------------------
+            || Thank you for using the Contact Tracing Program ||
+            ||                                                 ||
+            ||                   Goodbye!                      ||
+            =====================================================
+            """)
+
+            break
+
+        else:
+            print("\nRetry the Program, Go Back to Main Menu")
+            print_menu()
+
+    # Unknown Option of Menu
+    else:
+        print("\nSorry but", option, "is not a valid option")
+        print("Try Again!")
+        print_menu()

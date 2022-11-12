@@ -27,20 +27,21 @@ print_menu()
 while True:
     option = int(input("\nHi! Please Choose an option on what do you want to do? (From 1-3) : "))
 
-# This is the option 1 that will enter the infos of the user
+# This is the option 1 that will enter the info`s of the user
     if option == 1:
         print("\n=========== ADD Information =============")
         Fullname = (input("\nPlease Enter your Full Name: "))
         UsersAddress = (input("Enter your Address Location: "))
         PhoneNumber = (input("Enter your Phone Number: "))
         Gender = (input("Enter your Gender: "))
-        Occupation = (input("Enter your occupation: "))
-        Age = (int(input("Enter your age: ")))
+        Occupation = (input("Enter your Occupation: "))
+        Age = (int(input("Enter your Age: ")))
 
         ContactDictionary[Fullname] = {"Full Name": Fullname, "Address": UsersAddress,
                                        "Phone Number": PhoneNumber, "Gender": Gender,
                                        "Occupation": Occupation,
                                        "Age": Age}
+
         print("\n===== THIS IS THE ENTERED INFORMATION =====")
         print("\nThis is the entered Fullname:", Fullname)
         print("This is the entered Address:", UsersAddress)
@@ -48,7 +49,7 @@ while True:
         print("This is the entered Gender:", Gender)
         print("This is the entered Occupation:", Occupation)
         print("This is the entered Age:", Age)
-        print("\nYou have Successfully added a new Contact for Contact Tracing")
+        print("\nYou have Successfully added a new Contact for Contact Tracing Dictionary")
         print_menu()
 
     # This is the option 2, that will search a users full name in the Dictionary
@@ -62,7 +63,7 @@ while True:
             print("\nYou have Successfully Searched a Contact in the Dictionary")
             print_menu()
         else:
-            print("\nThe entered Full name is not found in the Dictionary")
+            print("\nThe entered Full name is not found in the Contact Tracing Dictionary")
             print_menu()
 
     # This is option 3, that will exit the program
